@@ -11,18 +11,12 @@
     "url": "git+https://github.com/BewitchedBySycorax/songbird.git"
   },
   "keywords": [],
-  "author": "Aleksei Voitovskii <al.voytovsky@gmail.com>",
+  "author": "Alexey Voytovsky <al.voytovsky@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/BewitchedBySycorax/songbird/issues"
   },
   "homepage": "https://github.com/BewitchedBySycorax/songbird#readme",
   "dependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.11.1",
-    "@babel/preset-env": "^7.11.0",
-    "babel-loader": "^8.1.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
   }
 }

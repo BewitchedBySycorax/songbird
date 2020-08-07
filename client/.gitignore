@@ -1,6 +1,9 @@
 # Apple Desktop Services Store
 .DS_Store 
 
+# Application build
+public/dist
+
 # Dependencies
 node_modules/
 
