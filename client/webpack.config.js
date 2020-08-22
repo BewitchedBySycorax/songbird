@@ -1,6 +1,7 @@
 /* eslint-disable */
 const path = require('path')
 const webpack = require('webpack')
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: {
@@ -39,12 +40,50 @@ module.exports = {
         test: /\.css$/,
         loader: 'style-loader!css-loader',
       },
+      // {
+      //   test: /\.css$/,
+      //   use: [ 'MiniCssExtractPlugin.loader' ]
+      // },
+      // {
+      //   test: /\.scss$/,
+      //   use: [
+      //     'style-loader',
+      //     MiniCssExtractPlugin.loader,
+      //     {
+      //       loader: 'css-loader',
+      //       options: { sourceMap: true }
+      //     }, {
+      //       loader: 'sass-loader',
+      //       options: { sourceMap: true }
+      //     }
+      //   ]
+      // },
       {
         test: /\.s[ac]ss$/i,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      {
+        // test: /\.(jpg|JPG|jpeg|png|gif|mp3|svg|ttf|woff2|woff|eot)$/gi,
+        test: /.(png|woff(2)?|eot|ttf|svg)(\?[a-z0-9=\.]+)?$/,
+        // test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '/assets/images/[name].[ext]',
+        }
+        // use: [
+          // {
+            // loader: 'file-loader',
+            // loader: 'file-loader?name=app/assets/images/[name].[ext]',
+          // },
+        // ],
+      },
     ],
   },
+  // plugins: [
+  //   new MiniCssExtractPlugin({
+  //     filename: '[name].css',
+  //   })
+  // ],
   // For import without .jsx
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
