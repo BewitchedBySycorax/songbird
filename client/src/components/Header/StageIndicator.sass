@@ -6,25 +6,17 @@
   background-color: $color-dark-green
   border-radius: 5px
   >.stageIndicator-item
-    display: inline-block
     background-color: transparent
     color: $color-white
     flex-grow: 1
     padding: 6px
-    text-align: center
   >.currentStage
     background-color: $color-light-green
 
 @media all and (min-width: 935px)
   .stageIndicator-item
-    display: flex
+    text-align: center
     border-radius: 5px
-
-@media all and (max-width: 700px)
-  .stageIndicator
-    font-size: 1.5rem
-    text-align: right
-    align-items: stretch
 
 @media all and (max-width: 934px)
   .stageIndicator
@@ -32,4 +24,13 @@
 
   .stageIndicator-item
     align-items: stretch
+    text-align: center
     border-radius: 5px
+
+@media all and (max-width: 700px)
+  .stageIndicator
+    font-size: 1.5rem
+
+@media all and (max-width: 426px)
+  .stageIndicator-item
+    text-align: left
