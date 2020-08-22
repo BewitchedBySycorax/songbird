@@ -1,15 +1,14 @@
 {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es2020": true,
-        "node": true
-    },
-    "extends": "airbnb-base",
-    "parserOptions": {
-        "ecmaVersion": 11
-    },
-    "rules": {
-        "semi": [2, "never"]
-    }
+	"env": {
+		"browser": true,
+		"commonjs": true,
+		"es2020": true,
+		"node": true
+	},
+	"extends": "airbnb-base",
+	"parserOptions": { "ecmaVersion": 11 },
+	"rules": {
+		"comma-dangle": ["error", "never"],
+		"semi": [2, "never"]
+	}
 }
