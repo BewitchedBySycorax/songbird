@@ -1,4 +1,51 @@
-h1
-  width: 100%
-  height: 250px
-  color: green
+// @charset 'UTF-8'
+// @import 'normalize.css'
+@import Global
+
+// $bckgrnd-img-path: './assets/images/'
+
+html, body
+  background-color: $color-main
+  height: 100%
+  overflow-x: hidden
+  margin: 0
+  padding: 0
+
+.wrapper
+  // background-image: url($bckgrnd-img-path + 'bckgrnd.jpg')
+  @include font-main
+  border: yellowgreen 1px solid
+  display: flex
+  flex-flow: column nowrap
+  // height: 100vh
+  margin: 0 5%
+  padding: 0 10px
+  // width: 100%
+  >.centralContent
+    >.question-answerOptions
+      background-color: purple
+      @include font-main
+      display: flex
+      // flex-flow: row nowrap
+      justify-content: space-between
+
+  >.nextLevel-btn
+    @include font-main
+    padding: 0.4rem 0.75rem
+    font-size: 1rem
+    background-color: $color-fields
+    border: 1px solid $color-borders
+    border-radius: 5px
+    color: $color-white
+    margin: 15px 25px
+    outline: none
+    cursor: pointer
+    transition: .3s
+    &:active
+      border-color: $color-borders-active
+    &.active-btn
+      background-color: $color-light-green
+      &:active
+        border-color: $color-borders-active
+      &:hover
+        background-color: $color-lightest-green
