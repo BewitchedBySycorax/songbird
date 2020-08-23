@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import Question from './components/Question/Question'
+import Question from './components/Question'
 import AnswerOptions from './components/AnswerOptions'
 import Description from './components/Description'
 
