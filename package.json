@@ -2,10 +2,10 @@
   "name": "songbird",
   "version": "1.0.0",
   "description": "A small interactive React app",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "npm run init-db && npx nodemon --exec babel-node index.js",
-    "dev": "nodemon npx nodemon --exec babel-node index.js",
+    "start": "npm run init-db && npx nodemon --exec babel-node server.js",
+    "dev": "nodemon npx nodemon --exec babel-node server.js",
     "sequelize-skeleton": "npx sequelize init",
     "init-db": "cd /usr/local/var/postgres/base && echo 'DROP DATABASE IF EXISTS dev_songbird; DROP DATABASE IF EXISTS test_songbird; CREATE DATABASE dev_songbird; CREATE DATABASE test_songbird' | psql -d postgres && cd -",
     "lint": "eslint './*.js'",
