@@ -4,7 +4,12 @@
   "description": "A small interactive React app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run init-db && npx nodemon --exec babel-node index.js",
+    "dev": "nodemon npx nodemon --exec babel-node index.js",
+    "sequelize-skeleton": "npx sequelize init",
+    "init-db": "cd /usr/local/var/postgres/base && echo 'DROP DATABASE IF EXISTS dev_songbird; DROP DATABASE IF EXISTS test_songbird; CREATE DATABASE dev_songbird; CREATE DATABASE test_songbird' | psql -d postgres && cd -",
+    "lint": "eslint './*.js'",
+    "lint:fix": "npm run lint -- --fix"
   },
   "repository": {
     "type": "git",
@@ -20,14 +25,20 @@
   "dependencies": {
     "cli-color": "^2.0.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "nodemon": "^2.0.4",
-    "sequelize": "^6.3.4",
-    "sequelize-cli": "^6.2.0"
+    "pg": "^8.3.2",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.4"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
     "eslint": "^7.7.0",
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0"
+    "eslint-plugin-import": "^2.22.0",
+    "nodemon": "^2.0.4",
+    "sequelize-cli": "^6.2.0"
   }
 }
