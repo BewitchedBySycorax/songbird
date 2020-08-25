@@ -6,10 +6,13 @@
 		"node": true
 	},
 	"extends": "airbnb-base",
-	"parserOptions": { "ecmaVersion": 11 },
+	"parserOptions": { 
+		"ecmaVersion": 11
+	},
 	"rules": {
-		"arrow-parens": ["error", "as-needed"],
-		"comma-dangle": ["error", "never"],
+		"arrow-parens": [2, "as-needed"],
+		"comma-dangle": [2, "never"],
+		"strict": [2, "global"],
 		"semi": [2, "never"]
 	}
 }
