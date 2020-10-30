@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import birdsData from '../../birdsData'
+import { connect } from 'react-redux'
 import Header from './components/Header/Header'
 import Router from './Router'
 import './App.sass'
@@ -21,9 +21,10 @@ class App extends Component {
   // pass currentStage as props to header/headerNav
 
   render() {
+    const { birdsData } = this.props
     const { currentStageInfo, currentStageNumber } = this.state
 
-    console.log(birdsData)
+    console.log('App', 26, birdsData)
 
     return (
       <div className='wrapper'>
@@ -33,7 +34,10 @@ class App extends Component {
             currentStageNumber={ currentStageNumber }
             score={ 0 }
           />
-          <Router currentStageNumber={ currentStageNumber } />
+          <Router 
+            currentStageNumber={ currentStageNumber }
+            birdsData={ birdsData }
+          />
         </BrowserRouter>
         <button
           className='nextLevel-btn'
@@ -45,4 +49,27 @@ class App extends Component {
   }
 }
 
-export default App
+const mapStateToProps = state => {
+  return {
+    // ! loading: state.userInfo.loading,
+    // ! error: state.userInfo.error
+
+    birds: state.birdsData.birds
+
+    // ? currentUser: state.userInfo.currentUser,
+
+    // isAuthorized: state.session.isAuthorized,
+    
+    // hasFullName: !!(state.userInfo.currentUser.first_name || state.userInfo.currentUser.last_name),
+    // askedToIntroduce: state.userInfo.currentUser.asked_to_introduce,
+    // modalAddAlbumOpened: state.modal.addAlbumOpened,
+    // modalChooseAlbumOpened: state.modal.chooseAlbumOpened
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

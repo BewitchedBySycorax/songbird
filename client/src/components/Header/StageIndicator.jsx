@@ -16,6 +16,8 @@ class Navigation extends Component {
       <div
         className={ `stageIndicator-item ${currentStageNumber === i + 1 ? 'currentStage' : ''}` }
         key={ currentStageInfo.length - i }
+        // onlyActiveOnIndex={ true }
+        // ! Check here
         to={ `/${stage.endpoint}/` }
       >
         {i + 1}. { stage.title }
