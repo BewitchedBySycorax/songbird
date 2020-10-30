@@ -9,3 +9,6 @@ node_modules/
 
 # Temp working directory
 temp/
+
+# Backup files
+*_backup*
