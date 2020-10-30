@@ -30,15 +30,16 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "pg": "^8.3.3",
+    "pg": "^8.4.2",
     "pg-hstore": "^2.3.3",
+    "pm2": "^4.5.0",
     "sequelize": "^6.3.4",
-    "uuid": "^8.3.0"
+    "uuid": "^8.3.1"
   },
   "devDependencies": {
-    "eslint": "^7.7.0",
+    "eslint": "^7.12.1",
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-import": "^2.22.1",
     "sequelize-cli": "^6.2.0"
   }
 }
